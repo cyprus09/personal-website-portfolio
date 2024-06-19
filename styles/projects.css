@@ -57,7 +57,7 @@ nav a.active {
 }
 
 main {
-  padding: 20px;
+  padding: 20px 100px 20px 100px;
 }
 
 .project {
@@ -145,6 +145,6 @@ footer {
 }
 
 .linkname {
-    color: rgba(23, 164, 225, 0.819);
-    font-size: medium;
-  }
+  color: rgba(23, 164, 225, 0.819);
+  font-size: medium;
+}

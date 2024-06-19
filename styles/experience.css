@@ -57,7 +57,7 @@ nav a.active {
 }
 
 main {
-  padding: 20px;
+  padding: 20px 100px 20px 100px;
 }
 
 .experience {
@@ -80,13 +80,6 @@ main {
 
 .experience ul {
   padding-left: 20px;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
 }
 
 footer {
@@ -154,4 +147,20 @@ footer {
 
 .linkname {
   color: rgba(57, 195, 255, 0.819);
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
 }
