@@ -7,21 +7,22 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  text-align: justify;
   align-items: center;
   box-sizing: border-box;
-  background-color: #0f172a;
+  background-color: #0e1c3d;
 }
 
 header {
   width: 100%;
   background-color: #f1f1f1;
   text-align: left;
-  border-bottom: 2px solid #55555585;
+  border-bottom: 2px solid #1f1f1fa8;
 }
 
 nav {
   width: 100%;
-  background-color: black;
+  background-color: #0e1c3d;
 }
 
 nav ul {
@@ -47,7 +48,13 @@ nav a:visited {
 
 nav a:hover {
   background-color: #555;
+  transition: ease-in;
+  transition-delay: 0.1s;
   color: #fff;
+}
+
+nav a.active {
+  font-weight: bold;
 }
 
 .profile-image-container {
@@ -94,35 +101,66 @@ p {
 }
 
 footer {
-  width: 100%;
-  padding: 20px 0;
+  background-color: #0e1c3d;
   display: flex;
   justify-content: center;
+  padding: 20px 0;
 }
 
 .footer-links {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 200px;
+  list-style-type: none;
 }
 
-.footer-links a,
-.footer-links a:visited {
-  display: inline-block;
+.footer-links li {
+  padding: 10px;
 }
 
-.footer-links img {
-  transition: transform 0.3s;
+.footer-links a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-.footer-links img:hover {
-  transform: scale(1.2);
+.footer-links a:hover {
+  background-color: #333;
+  transform: scale(1.1);
 }
 
-.footer-image {
-  padding-top: 10px;
-  width: 30px;
-  height: 50px;
+.footer-links a .icon {
+  color: #262626;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.footer-links li:nth-child(1) a:before {
+  background: #2dba4e;
+}
+
+.footer-links li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+.footer-links li:nth-child(3) a:before {
+  background: #0078d4;
+}
+
+.footer-links li:nth-child(4) a:before {
+  background: #fa57c1;
 }
 
 .linkname {

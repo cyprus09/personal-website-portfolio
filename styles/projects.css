@@ -4,30 +4,52 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: justify;
+  background-color: #0e1c3d;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: left;
+  border-bottom: 2px solid #1f1f1fa8;
+}
+
+nav {
+  width: 100%;
+  background-color: #0e1c3d;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
-nav ul li {
-  display: inline;
+nav li {
   margin-right: 20px;
 }
 
 nav a,
 nav a:visited {
-  color: white;
+  display: block;
+  padding: 14px 20px;
   text-decoration: none;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  transition: ease-in;
+  transition-delay: 0.1s;
+  color: #fff;
 }
 
 nav a.active {
@@ -39,9 +61,11 @@ main {
 }
 
 .project {
-  background-color: white;
+  background-color: #10172a;
   border-radius: 8px;
   padding: 20px;
+  text-align: justify;
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -58,8 +82,69 @@ main {
 }
 
 footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+  background-color: #0e1c3d;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
 }
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  list-style-type: none;
+}
+
+.footer-links li {
+  padding: 10px;
+}
+
+.footer-links a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.footer-links a .icon {
+  color: #262626;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-links a:hover .icon {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.footer-links li:nth-child(1) a:before {
+  background: #2dba4e;
+}
+
+.footer-links li:nth-child(2) a:before {
+  background: #55acee;
+}
+
+.footer-links li:nth-child(3) a:before {
+  background: #0078d4;
+}
+
+.footer-links li:nth-child(4) a:before {
+  background: #fa57c1;
+}
+
+.linkname {
+    color: rgba(23, 164, 225, 0.819);
+    font-size: medium;
+  }
