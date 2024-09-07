@@ -1,8 +1,14 @@
+:root {
+  --bg-color: #f7f4eb;
+  --text-color: #787878;
+  --link-color: #e44d26;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #787878;
-  background-color: #f7f4eb;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -10,13 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.memoji {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -24,19 +24,24 @@ body {
   padding: 20px;
   text-align: left;
 }
+
+.memoji {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #333;
 }
 p {
   margin-bottom: 15px;
 }
-strong {
-  color: #333;
-}
 a {
-  color: #e44d26;
+  color: var(--link-color);
   text-decoration: none;
 }
 a:hover {
@@ -45,7 +50,7 @@ a:hover {
 footer {
   width: 100%;
   padding: 20px 0;
-  background-color: #f7f4eb;
+  background-color: var(--bg-color);
 }
 .footer-links {
   list-style: none;
@@ -58,9 +63,25 @@ footer {
   margin: 0 10px;
 }
 .footer-links a {
-  color: #333;
+  color: var(--text-color);
   font-size: 24px;
 }
 .footer-links a:hover {
-  color: #e44d26;
+  color: var(--link-color);
+}
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f7f4eb;
+  --link-color: #ff6347;
 }
