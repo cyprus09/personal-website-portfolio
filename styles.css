@@ -36,6 +36,7 @@ body {
 h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  color: #1a1a1a;
 }
 p {
   margin-bottom: 15px;
@@ -84,4 +85,8 @@ footer {
   --bg-color: #1a1a1a;
   --text-color: #f7f4eb;
   --link-color: #ff6347;
+}
+
+.dark-mode h1 {
+  color: #f7f4eb;
 }
